@@ -4,7 +4,7 @@
 Vault Orca is a simple docker image to watch and unseal a Hashicorp Vault server when available.
 Each orca container own one key share.
 
-**This image is not safe, since you are exposing your unseal keys on docker config files. Don't use it on production.**
+**This image is not safe, since you are exposing your unseal keys on docker-compose. Don't use it on production.**
 
 ## Usage
 
