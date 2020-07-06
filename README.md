@@ -1,5 +1,5 @@
 # Vault Orca
-![vault orca](orca.png "Vault Orca")
+![vault orca](./orca.svg?raw=true "Vault Orca")
 
 Vault Orca is a simple docker image to watch and unseal a Hashicorp Vault server when available.
 Each orca container own one key share.
