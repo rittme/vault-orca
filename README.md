@@ -13,6 +13,8 @@ To use Vault Orca you need to set 3 environment variables:
 - UNSEAL_KEY: the master key share that belongs to this container
 - MINUTES: the delay between unseal checks
 
+If you need to use a self signed certificate for TLS, you can mount it at `/usr/local/share/ca-certificates`.
+
 ## Example docker-compose
 
 ```yml
@@ -27,4 +29,6 @@ services:
       VAULT_URL: https://vault.example:8200
       UNSEAL_KEY: KEY
       MINUTES: 5
+    volumes:
+      - /certs:/usr/local/share/ca-certificates:ro
 ```

@@ -1,8 +1,8 @@
 FROM alpine:latest
-RUN apk update && apk --no-cache add curl openssl jq
+RUN apk update && apk --no-cache add curl openssl jq ca-certificates
 
-COPY /scripts/* /etc/periodic/custom
-COPY startup.sh /usr/local/startup.sh
 
-RUN "/usr/local/startup.sh"
-CMD ["crond", "-f", "-l", "8"]
+COPY scripts/orca.sh /usr/local/orca.sh
+COPY scripts/startup.sh /usr/local/startup.sh
+
+CMD "/usr/local/startup.sh"
